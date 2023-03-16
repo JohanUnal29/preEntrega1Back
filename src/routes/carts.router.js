@@ -20,7 +20,8 @@ cartsRouter.get('/', async (req, res) => {
 
 cartsRouter.post('/:pid', (req, res) => {
     const { pid } = req.params;
-    const newProduct = cartManager.addProduct(parseInt(pid));
+    const count = req.body;
+    const newProduct = cartManager.addProduct(parseInt(pid), count);
     res.status(201).json(newProduct);
 });
 

@@ -6,7 +6,8 @@
 		"thumbnail": "UwU",
 		"code": 239,
 		"stock": 2,
-		"id": 0
+		"id": 0,
+		"count": "[object Object]2"
 	},
 	{
 		"title": "Aretes2",
@@ -15,6 +16,7 @@
 		"thumbnail": "UwU",
 		"code": 240,
 		"stock": 4,
-		"id": 1
+		"id": 1,
+		"count": 2
 	}
 ]
