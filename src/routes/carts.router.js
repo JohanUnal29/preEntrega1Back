@@ -20,14 +20,14 @@ cartsRouter.get('/', async (req, res) => {
 
 cartsRouter.post('/:pid', (req, res) => {
     const { pid } = req.params;
-    const newProduct = productManager.addProduct(parseInt(pid));
+    const newProduct = cartManager.addProduct(parseInt(pid));
     res.status(201).json(newProduct);
 });
 
 cartsRouter.put('/:pid', (req, res) => {
     const { pid } = req.params;
     const productUpdates = req.body;
-    const updatedProduct = productManager.updateCountProduct(parseInt(pid), productUpdates);
+    const updatedProduct = cartManager.updateCountProduct(parseInt(pid), productUpdates);
     if (updatedProduct) {
         res.json(updatedProduct);
     } else {
@@ -37,7 +37,7 @@ cartsRouter.put('/:pid', (req, res) => {
 
 cartsRouter.delete('/:pid', (req, res) => {
     const { pid } = req.params;
-    const success = productManager.deletProduct(parseInt(pid));
+    const success = cartManager.deletProduct(parseInt(pid));
     if (success) {
         res.json({ message: `Product with id ${pid} deleted` });
     } else {
@@ -46,4 +46,4 @@ cartsRouter.delete('/:pid', (req, res) => {
 });
 
 
-module.exports = productsRouter;
+module.exports = cartsRouter;

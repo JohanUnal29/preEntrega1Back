@@ -9,7 +9,7 @@ class ProductManager {
 
     addProduct = async (id, count) => {
         const products = await this.getProducts();
-        const productsCart = await this.getProducts2();
+        const productsCart = await this.getProductsCart();
 
         try {
             const product = products.find(element => element.id === id);
