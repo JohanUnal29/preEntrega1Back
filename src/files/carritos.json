@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "products": [
+      {
+        "title": "Aretes2",
+        "description": "Aretes flor",
+        "price": 20000,
+        "thumbnail": "UwU",
+        "code": 240,
+        "stock": 4,
+        "id": 1,
+        "count": 4
+      }
+    ]
+  }
+]

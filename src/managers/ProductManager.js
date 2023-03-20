@@ -10,7 +10,7 @@ class ProductManager {
 
         const productos = await this.getProducts();
         const productExists = productos.find(element => element.code === producto.code);
-        if (producto.title.length === 0 || producto.description.length === 0 || producto.price.length === 0 || producto.thumbnail.length === 0 || producto.code.length === 0 || producto.stock.length === 0) {
+        if (!producto.title || !producto.description || !producto.price || !producto.code || !producto.stock) {
             return console.log("Hay un campo vacío");
         } else {
 
